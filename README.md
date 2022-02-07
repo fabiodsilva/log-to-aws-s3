@@ -43,6 +43,9 @@ touch log-to-s3
 
 3 - After that create a shell script and change fields like we can see.
 
+vi /opt/logbackup/logbackup.sh
+
+Copy / paste / save 
 
 ```
 #!/bin/bash
@@ -153,6 +156,36 @@ do
     fi
 done
 ```
+#chmod 755 /opt/logbackup/logbackup.sh
+
+# bash -x ./logbackp /var/log/ messages
++ S3_BUCKET=<Bucket destiny>
++ LOG_PATH=/var/log/
++ APP_NAME=messages
+++ basename ./logbackp .sh
++ LOG_THIS=/var/log//logbackp.log
+++ hostname -s
++ HOSTNAME=ip-xxx-xxx-xxx-xxx
+++ which aws
++ AWS_CMD=/usr/local/bin/aws
++ '[' -n messages ']'
++ KEY_PREFIX=messages/ip-xxx-xxx-xxx-xxx
++ '[' -z /var/log/ -o /var/log/ = --help ']'
++ '[' /var/log/ = --test ']'
++ '[' '!' -d /var/log/ ']'
++ '[' '!' -x /usr/local/bin/aws ']'
++ _test
++ parse_file_name sample6-with-dashes_log.2017-01-03.bz2-enc
++ local 'pattern=(.*)[.-]([0-9]{4})-?([0-9]{2})-?([0-9]{2})(.*).(gz|bz2|xz).*'
++ [[ sample6-with-dashes_log.2017-01-03.bz2-enc =~ (.*)[.-]([0-9]{4})-?([0-9]{2})-?([0-9]{2})(.*).(gz|bz2|xz).* ]]
+++ basename sample6-with-dashes_log
++ filename=sample6-with-dashes_log
++ year=2017
++ month=01
++ day=03
++ '[' sample6-with-dashes_log '!=' sample6-with-dashes_log -o 2017 '!=' 2017 -o 01 '!=' 01 ']'
+++ ls '/var/log//*.gz' '/var/log//*.bz2' '/var/log//*.xz'
+
 
 After apply script we can see something like that.
 
