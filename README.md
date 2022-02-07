@@ -55,9 +55,12 @@ Copy / paste / save
 
 # Config TODO: move to external file
 S3_BUCKET=<log-to-s3-bucket>
+#------ if you are using a on-premise server, uncommented the follow lines -----------
 #export AWS_ACCESS_KEY_ID=<PUT YOUR ACCESS KEY HERE>
 #export AWS_SECRET_ACCESS_KEY=<PUT YOUR SECRET KEY HERE>
 #export AWS_DEFAULT_REGION=us-east-1
+--------------------------------------------------------------------------------------
+
 
 #--------- NO NEED TO CHANGE BELOW THIS LINE ---------
 
