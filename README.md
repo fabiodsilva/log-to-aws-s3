@@ -153,3 +153,11 @@ do
     fi
 done
 ```
+
+After apply script we can see something like that.
+
+![image](https://user-images.githubusercontent.com/25347806/152860869-f92c13e3-24b7-4e29-b6f6-43bb689ce36c.png)
+
+
+Thanks!!!!!! 
+:)
