@@ -2,12 +2,13 @@
 Apply Linux logs to S3
 
 
-Esse procedimento ensina como configurar o logrotate de uma aplicação e encaminhar os logs para o s3 da AWS.
+How we can send system operational logs to AWS S3.
 
-1 - CreateCriar um arquivo de configuração dentro da pasta /etc/logrotate.d. De preferência criar o arquivo com o nome da aplicação para ser mais fácil idêntificar.
-    Here we will send to S3 System Operacional logs.
+1 - Create a file inside directory /etc/logrotate.d. Choose a friendly name which we can identify the application.
+    
 
-2 - Crias as configurações de rotação do log. Para isso é necessário saber exatamente onde os logs da aplicação são salvos. Um exemplo de configuração abaixo.
+2 - We need to know exactly where the application logs are. After that follow the exemple bellow.
+
 
 cd /etc/logrotate.d/
 touch log-to-s3
@@ -15,11 +16,11 @@ touch log-to-s3
 # Copy follow content to log-to-s3 file.
 
 ```
-/var/log/cron
-/var/log/maillog
-/var/log/messages
-/var/log/secure
-/var/log/spooler
+/var/log/cron               #logs we want to send to S3, you can put how many you need.
+/var/log/maillog            #logs we want to send to S3, ...
+/var/log/messages           #logs we want to send to S3, ...
+/var/log/secure             #logs we want to send to S3, ...
+/var/log/spooler            #logs we want to send to S3, ...
 
 {
     notifempty
